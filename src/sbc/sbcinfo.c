@@ -22,6 +22,8 @@
  *
  */
 
+#ifndef ARDUINO
+
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
@@ -304,7 +306,6 @@ static int analyze_file(char *filename)
 	return 0;
 }
 
-#ifndef ARDUINO
 
 int main(int argc, char *argv[])
 {
