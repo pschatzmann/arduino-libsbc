@@ -21,6 +21,7 @@
  *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  *
  */
+#ifndef ARDUINO
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
@@ -291,3 +292,5 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
+
+#endif

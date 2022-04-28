@@ -23,6 +23,13 @@
 
 #include <byteswap.h>
 
+#ifdef ARDUINO 
+#define COMPOSE_ID(a,b,c,d)	((a) | ((b)<<8) | ((c)<<16) | ((d)<<24))
+#define LE_SHORT(v)		(v)
+#define LE_INT(v)		(v)
+#define BE_SHORT(v)		__builtin_bswap16(v)
+#define BE_INT(v)		__builtin_bswap32(v)
+#else
 #if __BYTE_ORDER == __LITTLE_ENDIAN
 #define COMPOSE_ID(a,b,c,d)	((a) | ((b)<<8) | ((c)<<16) | ((d)<<24))
 #define LE_SHORT(v)		(v)
@@ -37,6 +44,7 @@
 #define BE_INT(v)		(v)
 #else
 #error "Wrong endian"
+#endif
 #endif
 
 #define AU_MAGIC		COMPOSE_ID('.','s','n','d')
