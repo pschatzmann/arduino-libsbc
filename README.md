@@ -19,5 +19,6 @@ This has the advantage that you can easily get the latest code updates by just e
 
 I recommend to use this library together with my [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools). 
 This is just one of many __codecs__ that I have collected so far: Further details can be found in the [Encoding and Decoding Wiki](https://github.com/pschatzmann/arduino-audio-tools/wiki/Encoding-and-Decoding-of-Audio) of the Audio Tools.
+Last but not least here is also a link to the official [SBC documentation](https://www.bluetooth.com/specifications/specs/low-complexity-communication-codec-1-0/)
 
 
