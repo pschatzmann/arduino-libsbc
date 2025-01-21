@@ -34,11 +34,14 @@ extern "C" {
 #include <stdint.h>
 #include <sys/types.h>
 
+#ifndef SBC_FREQ_16000
 /* sampling frequency */
 #define SBC_FREQ_16000		0x00
 #define SBC_FREQ_32000		0x01
 #define SBC_FREQ_44100		0x02
 #define SBC_FREQ_48000		0x03
+#endif
+
 
 /* blocks */
 #define SBC_BLK_4		0x00
