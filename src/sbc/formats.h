@@ -22,7 +22,7 @@
  */
 #pragma once
 
-#if defined(ARDUINO) 
+#if defined(ARDUINO) || defined(ESP_PLATFORM)
 #  define bswap_16(v) __builtin_bswap16(v)
 #  define bswap_32(v) __builtin_bswap32(v)
 #else
