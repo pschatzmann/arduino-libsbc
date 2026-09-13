@@ -30,8 +30,8 @@
 #define SCALE_OUT_BITS 15
 #define SBC_X_BUFFER_SIZE 328
 
-#if defined(__GNUC__) && !defined(ARDUINO) 
-#define SBC_ALWAYS_INLINE __attribute__((always_inline))
+#if defined(__GNUC__) && !defined(ARDUINO)
+#define SBC_ALWAYS_INLINE inline __attribute__((always_inline))
 #else
 #define SBC_ALWAYS_INLINE inline
 #endif
