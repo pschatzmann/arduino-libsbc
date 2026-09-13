@@ -8,7 +8,7 @@ if (DEFINED ESP_PLATFORM)
   )
 
   # No -DARDUINO here (unlike the non-idf branch below): it would leak PUBLIC
-  # into every component that REQUIRES arduino-libsbc (ESP32-A2DP, main),
+  # into every component that REQUIRES codec-sbc (ESP32-A2DP, main),
   # making arduino-audio-tools/AudioToolsConfig.h think it's building against
   # the real Arduino framework (pulling in Arduino.h, expecting delay()/
   # millis()/etc.) when this is a plain esp-idf project. src/sbc/formats.h
